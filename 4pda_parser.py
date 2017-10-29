@@ -1,4 +1,7 @@
-from urllib.request import urlopen
+# парсинг подфорумов сайта http://4pda.ru 
+# с их последующей сортировкой по темам и ответам
+
+from urllib.request import urlopen 
 from bs4 import BeautifulSoup as bs
 
 html = urlopen('http://4pda.ru/forum/index.php?showforum=281')
