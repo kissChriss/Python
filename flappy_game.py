@@ -1,6 +1,5 @@
 ## Flappy Game with tkinter 
 
-```python
 
 import tkinter as tk
 import random as r
@@ -15,7 +14,6 @@ ywin = (root.winfo_screenheight() - root.winfo_reqheight()) / 2.5 #параме�
 root.wm_geometry("+%d+%d" % (xwin, ywin)) #параметры появления окна на экране
 canv = tk.Canvas(root, width = 500, height = win_height, bg = '#cde2f8')
 canv.grid()
-
 
 class rect(object): #летящий объект
     y = 20
@@ -55,8 +53,7 @@ def new_pipe():
         p = pipe()
         pipes.append(p)
         root.after(1500, new_pipe) #через 1.5 секунды появляется новая труба
-    
-       
+          
 def main():
     global in_game
     btn.destroy()
@@ -69,18 +66,12 @@ def main():
         if re.y >= 457 or ((re.x+40) >= ps.x and (re.y+40) >= ps.y):
             canv.create_text(250, 250, text="GAME OVER!", font="Arial 20",  fill="#ff0000")
             in_game = False #игровой процесс останавливается
-                  
 
 new_pipe()
-
 
 btn = tk.Button(root, text = 'Start', bg = '#cde2f8', command = main) 
 btn.place(x = 225, y = 250)
 
-
 root.mainloop()
 
-
-
-```
 
